@@ -18,9 +18,8 @@ const Products = () => {
   console.log("data",data)
   const [searchtext,setSearchtext]=useState("");
   console.log("searchtext",searchtext)
-  const filtered= !searchtext ? "" : data.map((title)=>title.filter((category)=>{category.name.toLowerCase().includes(searchtext.toLowerCase())})
-  );
-  
+  const filtered= !searchtext ? "" : data.filter((cat)=>{cat.category.toLowerCase().includes(searchtext.toLowerCase())})
+   
 //   const requestSearch = (searchtext) => {
 //     const filteredRows = data.filter((row) => {
 //       return row.category.toLowerCase().includes(searchtext.toLowerCase());
